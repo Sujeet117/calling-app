@@ -1,0 +1,157 @@
+:root{
+  --bg:#0f1220;
+  --card:#151a2f;
+  --muted:#8f9bb3;
+  --text:#e7eaf3;
+  --accent:#5d8cff;
+  --success:#1ecb76;
+  --danger:#ff4d5e;
+  --ring:#2a325b;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(1200px 800px at 20% -10%, #3a6fff22, transparent 60%),
+    radial-gradient(1000px 800px at 120% 120%, #ff5d7a22, transparent 60%),
+    var(--bg);
+  display:grid;
+  place-items:center;
+  padding:24px;
+}
+
+
+.phone{
+  width:min(360px, 92vw);
+  height:720px;
+  border-radius:40px;
+  background:linear-gradient(180deg, #0f1428 0%, #0b1023 100%);
+  border:1px solid #ffffff14;
+  box-shadow:
+    0 30px 60px rgba(0,0,0,.35),
+    inset 0 0 0 12px #0a0f2040;
+  padding:20px 14px;
+  position:relative;
+  overflow:hidden;
+}
+.notch{
+  width:160px;height:26px;background:#0a0f20;border-radius:0 0 16px 16px;
+  position:absolute;left:50%;top:0;transform:translateX(-50%);
+  box-shadow:0 2px 6px #0006;
+}
+
+
+.status{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:12px;color:var(--muted);margin-top:12px;padding:0 6px;
+}
+.bars{display:flex;gap:4px;align-items:flex-end}
+.bar{width:3px;border-radius:2px;background:#5f6b8f}
+.bar:nth-child(1){height:6px}
+.bar:nth-child(2){height:9px}
+.bar:nth-child(3){height:12px}
+.bar:nth-child(4){height:16px;background:#8fb4ff}
+
+
+.screen{
+  height:100%;
+  padding:18px 8px 20px;
+  display:flex;flex-direction:column;gap:18px;
+}
+
+.title{
+  text-align:center;
+  font-weight:700;
+  letter-spacing:.4px;
+  color:#c7d2ff;
+}
+
+
+.contact{
+  margin-top:8px;
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+}
+.avatar{
+  width:120px;height:120px;border-radius:50%;
+  background:linear-gradient(135deg,#5d8cff,#9b6bff);
+  display:grid;place-items:center;
+  position:relative;
+  box-shadow:0 10px 30px #0007;
+}
+.avatar::after{
+  content:"";
+  position:absolute;inset:-14px;
+  border-radius:50%;
+  border:2px dashed var(--ring);
+  animation:spin 10s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.avatar svg{width:64px;height:64px;fill:white;opacity:.9}
+
+.name{font-size:20px;font-weight:700}
+.sub{font-size:13px;color:var(--muted);letter-spacing:.3px}
+
+.pill{
+  margin:6px auto 0;
+  width:max-content;
+  padding:6px 12px;border-radius:999px;
+  background:#101633;border:1px solid #ffffff14;
+  color:#c6cbea;font-size:12px;
+  display:flex;gap:8px;align-items:center;
+}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--success);box-shadow:0 0 10px var(--success)}
+.timer{min-width:42px;display:inline-block;text-align:center}
+
+
+.grid{
+  margin-top:16px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  padding:0 8px;
+}
+.action{
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+}
+.btn{
+  width:64px;height:64px;border-radius:50%;
+  display:grid;place-items:center;
+  background:#121833;border:1px solid #ffffff10;
+  box-shadow:inset 0 -4px 10px #0004, 0 6px 16px #0006;
+  transition:transform .1s ease, filter .15s ease;
+  /* backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor:pointer; */
+}
+.btn svg{width:26px;height:26px;fill:#cdd6ff}
+.btn:active{transform:scale(.96);filter:brightness(.9)}
+.label{font-size:12px;color:var(--muted)}
+
+
+.bottom{
+  margin-top:auto;
+  display:flex;justify-content:center;gap:18px;align-items:center;
+  padding:8px 0 6px;
+}
+.circle{
+  width:74px;height:74px;border-radius:50%;display:grid;place-items:center;
+  box-shadow:inset 0 -6px 14px #0005, 0 10px 24px #0007;
+  border:1px solid #ffffff12;
+  background:#121833;
+  cursor:pointer;
+}
+.circle svg{width:28px;height:28px;fill:#d7ddff}
+.end{background:var(--danger);border:none}
+.end svg{fill:white}
+.hint{
+  text-align:center;color:#6e78a5;font-size:12px;margin-top:6px;
+}
+
+
+.safe{height:8px}
+
+@media (max-height:720px){
+  .phone{height:650px}
+}

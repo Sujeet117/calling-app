@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Call App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style .css">
+</head>
+<body>
+  <main class="phone" role="region" aria-label="Phone mockup">
+    <div class="notch" aria-hidden="true"></div>
+
+    <div class="status" aria-label="status bar">
+      <div class="clock">9:41</div>
+      <div class="bars" aria-hidden="true">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+    </div>
+
+    <section class="screen">
+      <div class="title">CALLING…</div>
+
+      <div class="contact" aria-label="contact info">
+        <div class="avatar" aria-hidden="true">
+          <!-- user icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 12c2.761 0 5-2.239 5-5S14.761 2 12 2 7 4.239 7 7s2.239 5 5 5Zm0 2c-4.418 0-8 2.239-8 5v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1c0-2.761-3.582-5-8-5Z"/>
+          </svg>
+        </div>
+        <div class="name">Sujeet Prajapati</div>
+        <div class="sub">Mobile • India</div>
+
+        <div class="pill" aria-live="polite">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="timer">00:24</span>
+        </div>
+      </div>
+
+      <div class="grid" aria-label="quick actions">
+        <!-- Mute -->
+        <div class="action">
+          <button class="btn" title="Mute" aria-label="Mute">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 9v6h4l5 5V4L9 9H5zm14.59 3L19 11.41 16.41 14 19 16.59 20.59 15 23 12.59 21.41 11 19 13.41z"/>
+            </svg>
+          </button>
+          <div class="label">Mute</div>
+        </div>
+        <!-- Keypad -->
+        <div class="action">
+          <button class="btn" title="Keypad" aria-label="Keypad">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 5h2v2H7V5zm4 0h2v2h-2V5zm4 0h2v2h-2V5zM7 9h2v2H7V9zm4 0h2v2h-2V9zm4 0h2v2h-2V9zM7 13h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zM11 17h2v2h-2v-2z"/>
+            </svg>
+          </button>
+          <div class="label">Keypad</div>
+        </div>
+        <!-- Speaker -->
+        <div class="action">
+          <button class="btn" title="Speaker" aria-label="Speaker">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a3.5 3.5 0 0 0-2.5-3.346v6.692A3.5 3.5 0 0 0 16.5 12zm-2.5-7.5v2.055A7 7 0 0 1 19 12a7 7 0 0 1-5 6.445V20.5A9.5 9.5 0 0 0 21.5 11 9.5 9.5 0 0 0 14 4.5z"/>
+            </svg>
+          </button>
+          <div class="label">Speaker</div>
+        </div>
+        <!-- Add Call -->
+        <div class="action">
+          <button class="btn" title="Add call" aria-label="Add call">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6v-2z"/>
+            </svg>
+          </button>
+          <div class="label">Add</div>
+        </div>
+        <!-- Video -->
+        <div class="action">
+          <button class="btn" title="Video" aria-label="Video">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17 10.5V7a2 2 0 0 0-2-2H5C3.9 5 3 5.9 3 7v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3.5l4 4v-11l-4 4z"/>
+            </svg>
+          </button>
+          <div class="label">Video</div>
+        </div>
+        <!-- Hold -->
+        <div class="action">
+          <button class="btn" title="Hold" aria-label="Hold">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 5h2v14H7V5zm8 0h2v14h-2V5z"/>
+            </svg>
+          </button>
+          <div class="label">Hold</div>
+        </div>
+      </div>
+
+      <div class="bottom" aria-label="call controls">
+        <button class="circle" title="Audio route" aria-label="Audio route">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 9v6h4l5 5V4L8 9H4zm13.5 3a3.5 3.5 0 0 0-2.5-3.346v6.692A3.5 3.5 0 0 0 17.5 12z"/>
+          </svg>
+        </button>
+        <button class="circle end" title="End call" aria-label="End call">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21.16 14.84c-1.22-1.22-3.94-2.18-6.16-2.18s-4.94.96-6.16 2.18L6 12c1.8-1.8 5.2-3 9-3s7.2 1.2 9 3l-2.84 2.84z"/>
+          </svg>
+        </button>
+        <button class="circle" title="Contacts" aria-label="Contacts">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5Zm0 2c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5Z"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="hint">Design by Sujeet</div>
+      <div class="safe"></div>
+    </section>
+  </main>
+</body>
+</html>
